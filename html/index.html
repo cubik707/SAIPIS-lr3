@@ -5,29 +5,101 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LR-3</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <title>LR-3</title>
+    
 </head>
 <body>
-    <header>
-        <img src="../assets/logo.png" alt="logo">
-    </header>
-    <section>
-        <nav>
-            <ul>
-                <li>Главная</li>
-                <li>Результаты</li>
-            </ul>
-        </nav>
-        <article>
+    <div class="flex-wrapper">
+        <header>
+            <img src="../assets/logo.png" alt="logo">
+        </header>
+        <section>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Результаты</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h1>Опрос пользователей о их предпочтениях телепередач</h1>
+                <h2> Поделитесь своим <span class="accent">мнением</span> </h2>
+                <fieldset class="form1">
+                    <legend>Контактная информация</legend>
+                    <p>Ваше имя</p>
+                    <input type="text" required>
 
-        </article>
-        <aside>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, fugiat. Beatae reprehenderit, aspernatur aliquam odio praesentium omnis velit consequatur deleniti! Libero voluptate cupiditate numquam facere aliquam unde similique voluptatum! Excepturi!
-            </p>
-        </aside>
-    </section>
-    <footer></footer>
+                    <p>Ваш телефон</p>
+                    <input type="number" required>
+
+                    <p>Ваша почта</p>
+                    <input type="email" required>
+
+                    <p>Ваш пол</p>
+                    <input class="radio" id="male" type="radio" name = "stack" checked>
+                    <label for="male">
+                        Мужской
+                    </label>
+                    <input class="radio" id ="female" type="radio" name = "stack">
+                    <label for="female">
+                        Женский
+                    </label>
+                    <input class="radio" id ="other" type="radio" name = "stack">
+                    <label for="other">
+                        Другое
+                    </label>
+                </fieldset>
+                <fieldset class="form2">
+                    <legend>Предпочтения</legend>
+                    <p>Выберите передачи, которые вы смотрите:</p>
+                    <div class="checkbox">
+                        <input class="checkbox" id = "TVshow1"  type="checkbox" name = "TVshow1" checked>
+                        <label for="TVshow1"></label>
+                            Передача1
+                        </label>
+                        <input class="checkbox" id = "TVshow2"  type="checkbox" name = "TVshow2">
+                        <label for="TVshow2"></label>
+                            Передача2
+                        </label>
+                        <input class="checkbox" id = "TVshow3"  type="checkbox" name = "TVshow3">
+                        <label for="TVshow3"></label>
+                            Передача3
+                        </label>
+                        <input class="checkbox" id = "TVshow-other"  type="checkbox" name = "TVshow-other">
+                        <label for="TVshow-othe"></label>
+                            Другое
+                        </label>
+                    </div>                    
+
+                    <label for="portal">Выберите портал, на котором вы смотрите:</label>
+                    <select class = "portal" name="portal" id="portal" required>
+                        <option value="Портал1">Портал1</option>
+                        <option value="Портал2">Портал2</option>
+                        <option value="Портал3">Портал3</option>
+                        <option value="Другое">Другое</option>
+                    </select>
+
+                    <label for="week">Выберите, что-то с неделей:</label>
+                    <input type="week" class="week" id="week" required>
+
+                    <label for="review">Оставьте ваши комментарии:</label>
+                    <input type="textarea" class="review" id="review">
+                </fieldset>
+                <button class="send-btn">ОТПРАВИТЬ</button>
+            </article>
+            <aside>
+                <p class="note">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, fugiat. Beatae reprehenderit, aspernatur aliquam odio praesentium omnis velit consequatur deleniti! Libero voluptate cupiditate numquam facere aliquam unde similique voluptatum! Excepturi!
+                </p>
+            </aside>
+        </section>
+        <footer>
+            <small>674 Gonzales Drive.   Washington, PA 15301</small>
+        </footer>
+    </div>    
 </body>
 </html>
