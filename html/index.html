@@ -22,74 +22,101 @@
             <nav>
                 <ul class="navigation">
                     <li><a href="#">Главная</a></li>
-                    <li><a href="#">Результаты</a></li>
+                    <li><a href="index2.html">Результаты</a></li>
                 </ul>
             </nav>
             <article>
                 <h1>Опрос пользователей о их предпочтениях телепередач</h1>
                 <h2> Поделитесь своим <span class="accent">мнением</span> </h2>
-                <fieldset class="form1">
-                    <legend>Контактная информация</legend>
-                    <p>Ваше имя</p>
-                    <input type="text" required>
+                <form name="main">
+                    <fieldset>
+                        <legend>Контактная информация</legend>
+                        <div class="field">
+                            <p>Ваше имя</p>
+                            <input id="name" type="text" placeholder="Имя..." name="name" required>
+                        </div>
+                        
+                        <div class="field">
+                            <p>Ваш телефон</p>
+                            <input id="number" type="number" placeholder="+375-хх-хх-хх-ххх..." name="number" required>
+                        </div>                    
 
-                    <p>Ваш телефон</p>
-                    <input type="number" required>
+                        <div class="field">
+                            <p>Ваша почта</p>
+                            <input id="email" type="email" placeholder="dsgrf@email.com" required>
+                        </div>
+                        
+                        <div class="field">
+                            <p>Ваш пол</p>
+                            <div class="label-wrapper">
+                                <label for="male">
+                                    <input class="radio" id="male" type="radio" name="gender" value="мужской" checked>
+                                    Мужской
+                                </label>
+                                
+                                <label for="female">
+                                    <input class="radio" id="female" type="radio" name="gender" value="женский"> 
+                                    Женский
+                                </label>
+                        
+                                <label for="other">
+                                    <input class="radio" id="other" type="radio" name="gender">
+                                    Другое
+                                </label>
+                            </div>                           
+                        </div>
+                    </fieldset>
 
-                    <p>Ваша почта</p>
-                    <input type="email" required>
+                    <fieldset class="form2">
+                        <legend>Предпочтения</legend>
+                        <p>Выберите передачи, которые вы смотрите:</p>
+                        <div class="checkbox">
+                            
+                            <label for="TVshow1">
+                                <input class="checkbox" id = "TVshow1"  type="checkbox" name = "TVshow" value="Передача1" checked>
+                                Передача1
+                            </label>
+                            
+                            <label for="TVshow2">
+                                <input class="checkbox" id = "TVshow2"  type="checkbox" name = "TVshow" value="Передача2">
+                                Передача2
+                            </label>
+                            
+                            <label for="TVshow3">
+                                <input class="checkbox" id = "TVshow3"  type="checkbox" name = "TVshow"
+                                value="Передача3">
+                                Передача3
+                            </label>
+                            
+                            <label for="TVshow-othe">
+                                <input class="checkbox" id = "TVshow-other"  type="checkbox" name = "TVshow" value="Другое">
+                                Другое
+                            </label>
+                        </div>                    
+    
+                        <label for="portal">Выберите портал, на котором вы смотрите:</label>
+                        <select class = "portal" name="portal" id="portal" required>
+                            <option value="Портал1">Портал1</option>
+                            <option value="Портал2">Портал2</option>
+                            <option value="Портал3">Портал3</option>
+                            <option value="Другое">Другое</option>
+                        </select>
+    
+                        <label for="week">Выберите, что-то с неделей:</label>
+                        <input type="week" class="week" id="week" required>
+    
+                        <label for="review">Оставьте ваши комментарии:</label>
+                        <textarea class="review" id="review"></textarea>
+                    </fieldset> 
 
-                    <p>Ваш пол</p>
-                    <input class="radio" id="male" type="radio" name = "stack" checked>
-                    <label for="male">
-                        Мужской
-                    </label>
-                    <input class="radio" id ="female" type="radio" name = "stack">
-                    <label for="female">
-                        Женский
-                    </label>
-                    <input class="radio" id ="other" type="radio" name = "stack">
-                    <label for="other">
-                        Другое
-                    </label>
-                </fieldset>
-                <fieldset class="form2">
-                    <legend>Предпочтения</legend>
-                    <p>Выберите передачи, которые вы смотрите:</p>
-                    <div class="checkbox">
-                        <input class="checkbox" id = "TVshow1"  type="checkbox" name = "TVshow1" checked>
-                        <label for="TVshow1"></label>
-                            Передача1
-                        </label>
-                        <input class="checkbox" id = "TVshow2"  type="checkbox" name = "TVshow2">
-                        <label for="TVshow2"></label>
-                            Передача2
-                        </label>
-                        <input class="checkbox" id = "TVshow3"  type="checkbox" name = "TVshow3">
-                        <label for="TVshow3"></label>
-                            Передача3
-                        </label>
-                        <input class="checkbox" id = "TVshow-other"  type="checkbox" name = "TVshow-other">
-                        <label for="TVshow-othe"></label>
-                            Другое
-                        </label>
-                    </div>                    
+                    <div class="btn-wrapper">
+                        <input type="submit" value="Отправить">
+                        <input type="reset" value="Сброс">
+                    </div>
 
-                    <label for="portal">Выберите портал, на котором вы смотрите:</label>
-                    <select class = "portal" name="portal" id="portal" required>
-                        <option value="Портал1">Портал1</option>
-                        <option value="Портал2">Портал2</option>
-                        <option value="Портал3">Портал3</option>
-                        <option value="Другое">Другое</option>
-                    </select>
-
-                    <label for="week">Выберите, что-то с неделей:</label>
-                    <input type="week" class="week" id="week" required>
-
-                    <label for="review">Оставьте ваши комментарии:</label>
-                    <input type="textarea" class="review" id="review">
-                </fieldset>
-                <button class="send-btn">ОТПРАВИТЬ</button>
+                    
+                </form>
+                                
             </article>
             <aside>
                 <p class="note">
@@ -100,6 +127,7 @@
         <footer>
             <small>674 Gonzales Drive.   Washington, PA 15301</small>
         </footer>
-    </div>    
+    </div>
+    <script src="../index.js"></script>
 </body>
 </html>
